@@ -1,0 +1,10 @@
+version: "3.9"  
+services:
+  dot-proxy:
+    build: .
+    image: dot-proxy:0.0.2
+    container_name: dot-proxy
+    ports: 
+      - target: 53
+        published: 53
+        protocol: udp
